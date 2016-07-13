@@ -6,7 +6,7 @@ var PopeMap = PopeMap || {};
   var mapLayers = {};
   var layerNames = ['highways','walking','screens','hospitals','transit','entrances','poperide','parking'];
   
-  var accessToken = 'pk.eyJ1IjoibGF1cmVuYW5jb25hIiwiYSI6ImNpZjMxbWtoeDI2MjlzdW0zanUyZGt5eXAifQ.0yDBBkfLr5famdg4bPgtbw';
+  var accessToken = 'pk.eyJ1Ijoic2tvcmFzYXVydXMiLCJhIjoiaEdGTUZWTSJ9.osOC8tWU3bMaNprVNoEu7g';
 
   var INTERACTIVE_PATTERN = /\.i$/;
   var isInteractive = function(feature) {
@@ -57,7 +57,7 @@ var PopeMap = PopeMap || {};
 
     map = PopeMap.map = new mapboxgl.Map({
       container: 'map',
-      style: 'mapbox://styles/laurenancona/cieoq4nyj0i1ns1m2sctobre0',
+      style: 'mapbox://styles/skorasaurus/cinkyzfbk0000adnceuyatmea/',
       center: [-75.1575, 39.9572],
       bearing: 9.2, // Rotate Philly ~9° off of north
       zoom: 12,
