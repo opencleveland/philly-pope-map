@@ -4,7 +4,7 @@ var PopeMap = PopeMap || {};
   'use strict';
 
   var mapLayers = {};
-  var layerNames = ['highways','walking','screens','hospitals','transit','entrances','poperide','parking'];
+  var layerNames = ['highways','walking','securityzone','hospitals','transit','entrances','poperide','parking'];
   
   var accessToken = 'pk.eyJ1Ijoic2tvcmFzYXVydXMiLCJhIjoiaEdGTUZWTSJ9.osOC8tWU3bMaNprVNoEu7g';
 
@@ -126,7 +126,7 @@ var PopeMap = PopeMap || {};
       var layerAssociation = {  //using '.i' in GL layernames we want to be interactive
         'highways': ['highways.i','highways.casing.i','highways.label'],
         'walking': ['walking.i'],
-        'screens': ['screens.i'],
+        'securityzone': ['securityzone.i'],
         'hospitals': ['hospitals.i'],
         'transit': ['transit-stations.i','septa-rr.lines.i','market-st','broad-st','patco'],
         'entrances': ['gates.i'],
@@ -195,9 +195,9 @@ var PopeMap = PopeMap || {};
     walking.loadURL('data/walking.geojson');
     mapLayers['walking'] = walking;
 
-    var screens = L.mapbox.featureLayer();//.addTo(map);
-    screens.loadURL('data/jumbotrons.geojson');
-    mapLayers['screens'] = screens;
+    var securityzone = L.mapbox.featureLayer();//.addTo(map);
+    securityzone.loadURL('data/security_zone.geojson');
+    mapLayers['securityzone'] = securityzone;
 
     var hospitals =  L.mapbox.featureLayer();//.addTo(map);
     hospitals.loadURL('data/hospitals.geojson');
