@@ -57,7 +57,7 @@ var PopeMap = PopeMap || {};
 
     map = PopeMap.map = new mapboxgl.Map({
       container: 'map',
-      style: 'mapbox://styles/skorasaurus/cinkyzfbk0000adnceuyatmea/',
+      style: 'mapbox://styles/skorasaurus/cinkwr2wg0000bxnpaq2mw5uh',
       center: [-81.6879, 41.4991], 
       bearing: 9.2, // Rotate Philly ~9° off of north
       zoom: 12,
