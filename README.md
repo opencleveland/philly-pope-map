@@ -1,9 +1,11 @@
-# philly-pope-map
+# rnc-map
 everything in its right place
 
-A central resource for all geographic information related to the Pope's visit to Philadelphia in September, 2015.
+A central resource for all geographic information related to the RNC in Cleveland 2016. 
 
-![](https://raw.githubusercontent.com/laurenancona/philly-pope-map/gh-pages/img/popemap.png)
+
+code based on the philly-pope-map
+
 
 ##Thank you
 
@@ -11,4 +13,4 @@ This project would not have been possible without the generous support of [Mapbo
 
 ##More information
 
-* [Presentation Slides](https://docs.google.com/presentation/d/15xq3Oj2mn6XFH7rs1Hk55AwoN9Z-78VjQ6tzGx4kMdw/present?slide=id.p) from JS.Geo talk
+* [philly-pope-map Presentation Slides](https://docs.google.com/presentation/d/15xq3Oj2mn6XFH7rs1Hk55AwoN9Z-78VjQ6tzGx4kMdw/present?slide=id.p) from JS.Geo talk
