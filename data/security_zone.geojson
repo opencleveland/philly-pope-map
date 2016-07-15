@@ -4,10 +4,10 @@
     {
       "type": "Feature",
       "properties": {
-        "stroke": "FF2241",
+        "stroke": "#FF2241",
         "stroke-width": 2,
         "stroke-opacity": 1,
-        "fill": "FF2241",
+        "fill": "#FF2241",
         "fill-opacity": 0.5,
         "distinction": "restricted"
       },
