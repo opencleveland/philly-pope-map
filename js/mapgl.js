@@ -4,7 +4,7 @@ var PopeMap = PopeMap || {};
   'use strict';
 
   var mapLayers = {};
-  var layerNames = ['highways','walking','securityzone','hospitals','transit','entrances','poperide','parking'];
+  var layerNames = ['highways','eventzone','securityzone','hospitals','transit','entrances','poperide','parking'];
   
   var accessToken = 'pk.eyJ1Ijoic2tvcmFzYXVydXMiLCJhIjoiaEdGTUZWTSJ9.osOC8tWU3bMaNprVNoEu7g';
 
@@ -57,12 +57,12 @@ var PopeMap = PopeMap || {};
 
     map = PopeMap.map = new mapboxgl.Map({
       container: 'map',
-      style: 'mapbox://styles/skorasaurus/cinkyzfbk0000adnceuyatmea',
+      style: 'mapbox://styles/skorasaurus/ciqpgfnv2002kbhnfbxx41370',
       center: [-81.6879, 41.4991], 
       bearing: 9.2, // Rotate Philly ~9° off of north
       zoom: 12,
       maxZoom: 18,
-      minZoom: 11,
+      minZoom: 4,
     //   maxBounds: bounds,
       hash: true,
     });
@@ -125,7 +125,7 @@ var PopeMap = PopeMap || {};
     map.on('load', function() {
       var layerAssociation = {  //using '.i' in GL layernames we want to be interactive
         'highways': ['highways.i','highways.casing.i','highways.label'],
-        'walking': ['walking.i'],
+        'eventzone': ['eventzone.i'],
         'securityzone': ['securityzone.i'],
         'hospitals': ['hospitals.i'],
         'transit': ['transit-stations.i','septa-rr.lines.i','market-st','broad-st','patco'],
@@ -172,7 +172,7 @@ var PopeMap = PopeMap || {};
       infoControl: false,
       attributionControl: false,
       maxZoom: 18,
-      minZoom: 13,
+      minZoom: 10,
       center: [39.9572, -75.1575],
       zoom: 14
     });
@@ -191,9 +191,9 @@ var PopeMap = PopeMap || {};
     highways.loadURL('data/highways.geojson');
     mapLayers['highways'] = highways;
 
-    var walking = L.mapbox.featureLayer(); //.addTo(map);
-    walking.loadURL('data/walking.geojson');
-    mapLayers['walking'] = walking;
+    var eventzone = L.mapbox.featureLayer(); //.addTo(map);
+    eventzone.loadURL('data/eventzone.geojson');
+    mapLayers['eventzone'] = eventzone;
 
     var screens = L.mapbox.featureLayer();//.addTo(map);
     screens.loadURL('data/jumbotrons.geojson');
