@@ -6,7 +6,7 @@ var PopeMap = PopeMap || {};
   var mapLayers = {};
   var layerNames = ['highways','eventzone','securityzone','hospitals','transit','entrances','poperide','parking'];
   
-  var accessToken = 'pk.eyJ1Ijoic2tvcmFzYXVydXMiLCJhIjoiaEdGTUZWTSJ9.osOC8tWU3bMaNprVNoEu7g';
+  var accessToken = 'pk.eyJ1Ijoic2tvcmFzYXVydXMiLCJhIjoiY2lxcjg1YTVsMDJvcWZ2bmg2N2NqNnp4eiJ9.hawlymSYdHfhzhL3ypo2hg';
 
   var INTERACTIVE_PATTERN = /\.i$/;
   var isInteractive = function(feature) {
@@ -164,7 +164,7 @@ var PopeMap = PopeMap || {};
     map = PopeMap.map = L.mapbox.map('map').setView([41.4991, -81.6879], 14);
 
     // initial maplayer from mapboxstudio
-    L.mapbox.styleLayer('mapbox://styles/skorasaurus/cinkyzfbk0000adnceuyatmea').addTo(map);
+    L.mapbox.styleLayer('mapbox://styles/mapbox/light-v9').addTo(map);
 
     // Map controls and additions for URL hash, geocoding, and locate-me
 
