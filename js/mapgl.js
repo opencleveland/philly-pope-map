@@ -164,7 +164,7 @@ var PopeMap = PopeMap || {};
 
     var southWest = L.latLng(39.864439, -75.387541),
         northEast = L.latLng(40.156325, -74.883544),
-        bounds = L.latLngBounds(southWest, northEast);
+     //   bounds = L.latLngBounds(southWest, northEast);
 
     map = PopeMap.map = L.mapbox.map('map', 'skorasaurus.e5ff1f07', { // Popemap polygons baselayer
       // set that bounding box as maxBounds to restrict moving the map (http://leafletjs.com/reference.html#map-maxbounds)
@@ -173,7 +173,7 @@ var PopeMap = PopeMap || {};
       attributionControl: false,
       maxZoom: 18,
       minZoom: 10,
-      center: [39.9572, -75.1575],
+      center: [41.4991, -81.6879],
       zoom: 14
     });
 
@@ -338,6 +338,7 @@ var PopeMap = PopeMap || {};
     PopeMap.initFancyMap();
 
   } else {
+    console.log("classic map support")
     PopeMap.initClassicMap();
   }
 
