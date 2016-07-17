@@ -195,9 +195,9 @@ var PopeMap = PopeMap || {};
     eventzone.loadURL('data/eventzone.geojson');
     mapLayers['eventzone'] = eventzone;
 
-    var screens = L.mapbox.featureLayer();//.addTo(map);
-    screens.loadURL('data/jumbotrons.geojson');
-    mapLayers['screens'] = screens;
+    var securityzone = L.mapbox.featureLayer();//.addTo(map);
+    securityzone.loadURL('data/securityzone.geojson');
+    mapLayers['securityzone'] = securityzone;
 
     var hospitals =  L.mapbox.featureLayer();//.addTo(map);
     hospitals.loadURL('data/hospitals.geojson');
