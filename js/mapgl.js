@@ -160,22 +160,11 @@ var PopeMap = PopeMap || {};
 
     L.mapbox.accessToken = accessToken;
 
-    // Construct a bounding box
 
-    var southWest = L.latLng(39.864439, -75.387541),
-        northEast = L.latLng(40.156325, -74.883544),
-     //   bounds = L.latLngBounds(southWest, northEast);
+    map = PopeMap.map = L.mapbox.map('map').setView([41.4991, -81.6879], 14);
 
-    map = PopeMap.map = L.mapbox.map('map', 'skorasaurus.e5ff1f07', { // Popemap polygons baselayer
-      // set that bounding box as maxBounds to restrict moving the map (http://leafletjs.com/reference.html#map-maxbounds)
-    //  maxBounds: bounds,
-      infoControl: false,
-      attributionControl: false,
-      maxZoom: 18,
-      minZoom: 10,
-      center: [41.4991, -81.6879],
-      zoom: 14
-    });
+    // initial maplayer from mapboxstudio
+    L.mapbox.styleLayer('mapbox://styles/skorasaurus/cinkyzfbk0000adnceuyatmea').addTo(map);
 
     // Map controls and additions for URL hash, geocoding, and locate-me
 
