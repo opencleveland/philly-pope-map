@@ -1,10 +1,12 @@
 var PopeMap = PopeMap || {};
 
+
+
 (function() {
   'use strict';
 
   var mapLayers = {};
-  var layerNames = ['highways','eventzone','securityzone','hospitals','transit','entrances','poperide','parking'];
+  var layerNames = ['roads','eventzone','securityzone'];
   
   var accessToken = 'pk.eyJ1Ijoic2tvcmFzYXVydXMiLCJhIjoiY2lxcjg1YTVsMDJvcWZ2bmg2N2NqNnp4eiJ9.hawlymSYdHfhzhL3ypo2hg';
 
@@ -176,9 +178,9 @@ var PopeMap = PopeMap || {};
 
     // Here be our data layers
 
-    var highways = L.mapbox.featureLayer(); //.addTo(map);
-    highways.loadURL('data/highways.geojson');
-    mapLayers['highways'] = highways;
+    var roads = L.mapbox.featureLayer(); //.addTo(map);
+    roads.loadURL('data/roads.geojson');
+    mapLayers['roads'] = roads;
 
     var eventzone = L.mapbox.featureLayer(); //.addTo(map);
     eventzone.loadURL('data/eventzone.geojson');
@@ -249,9 +251,9 @@ var PopeMap = PopeMap || {};
       showInfo('parking', e.layer.feature);
     });
 
-    highways.on('click', function (e) {
+    roads.on('click', function (e) {
       e.layer.closePopup();
-      showInfo('highways', e.layer.feature);
+      showInfo('roads', e.layer.feature);
     });
 
     hospitals.on('click', function (e) {
@@ -360,5 +362,5 @@ else {
   };
   console.log("%cHey there", styles.medium);
   console.log("%cIf you're into this kind of thing and want to help out, let me know.", styles.medium);
-  console.log("%chttp://github.com/laurenancona or @laurenancona", styles.medium);
+  console.log("%chttp://github.com/opencleveland or @opencleveland", styles.medium);
 }

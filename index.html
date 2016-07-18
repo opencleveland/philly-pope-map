@@ -1,25 +1,17 @@
 <!doctype html>
 <html>
 <head>
-<!--  Force https, because location sharing creeps me out -->
-  <script type="text/javascript">
-    var host = "phillypopemap.com";
-    if ((host == window.location.host) && (window.location.protocol != "https:"))
-      window.location.protocol = "https";
-  </script>
   <meta charset="UTF-8">
   <title>The RNC Map</title>
   <!--  OG & Metadata  -->
   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-  <meta property="og:title" content="Philly Pope Map | Philadelphia" />
-  <meta property="og:url" content="https://phillypopemap.com" />
-  <meta property="og:site_name" content="Philly Pope Map" />
-  <meta property="og:image" content="https://phillypopemap.com/img/hotlink-ok/phillypopemap.jpg" />
-  <meta property="og:description" content="Transit, security & event information for September 26-28, 2015" />
+  <meta property="og:title" content="RNC" />
+  <meta property="og:url" content="http://www.opencleveland.org/rnc-map" />
+  <meta property="og:site_name" content="CLE RNC Map" />
+  <meta property="og:description" content="Transit, security & event information for the RNC" />
   <meta name="twitter:card" content="photo" />
   <meta name="twitter:site" content="@laurenancona" />
   <meta name="twitter:creator" content="@laurenancona" />
-  <link rel="image_src" href="https://phillypopemap.com/img/hotlink-ok/phillypopemap.jpg" />
   <!-- Save to homescreen nonsense -->
   <!-- Add to homescreen for Chrome on Android -->
   <meta name="mobile-web-app-capable" content="yes">
@@ -27,7 +19,7 @@
   <!-- Add to homescreen for Safari on iOS -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="Philly Pope Map">
+  <meta name="apple-mobile-web-app-title" content="CLE RNC Map">
   <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
   <!-- Tile icon for Win8 (144x144 + tile color) -->
   <meta name="msapplication-TileImage" content="img/ms-touch-icon-144x144-precomposed.png">
@@ -43,7 +35,6 @@
   <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.11.0/mapbox-gl-dev.js"></script>
 -->
 
-  <script src="//cdn.ravenjs.com/1.1.22/raven.min.js"></script>
 
   <script src="js/mapbox-gl-dev.js"></script>
   <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.11.0/mapbox-gl.css" rel="stylesheet" />
@@ -93,9 +84,7 @@
   <!-- End Google Tag Manager -->
 
   <!-- Sentry -->
-  <script>
-    Raven.config('https://3dc95625e5a44d34afb875ba056cece7@app.getsentry.com/53368').install()
-  </script>
+
   <!-- End Sentry -->
 
   <style>
@@ -180,20 +169,20 @@
               <span class="mdl-switch__label">Secure Areas</span>
             </label>
 -->
-            <label class="pad mdl-switch mdl-js-switch mdl-js-ripple-effect" for="highways">
-              <input type="checkbox" id="highways" class="mdl-switch__input">
-              <span class="mdl-switch__label">Closed Highways (TO DO)</span>
+            <label class="pad mdl-switch mdl-js-switch mdl-js-ripple-effect" for="roads">
+              <input type="checkbox" id="roads" class="mdl-switch__input">
+              <span class="mdl-switch__label">Closed Highways</span>
             </label>
             <label class="pad mdl-switch mdl-js-switch mdl-js-ripple-effect" for="eventzone">
               <input type="checkbox" id="eventzone" class="mdl-switch__input">
               <span class="mdl-switch__label">Event Zone</span>
             </label>
             <label class="pad mdl-switch mdl-js-switch mdl-js-ripple-effect" for="securityzone">
-              <input type="checkbox" id="securityzone" class="mdl-switch__input">
+              <input type="checkbox" id="securityzone" class="mdl-switch__input" checked>
               <span class="mdl-switch__label">Security zone</span>
             </label>
             <label class="pad mdl-switch mdl-js-switch mdl-js-ripple-effect" for="transit">
-              <input type="checkbox" id="transit" class="mdl-switch__input" checked>
+              <input type="checkbox" id="transit" class="mdl-switch__input">
               <span class="mdl-switch__label">Transit (TO DO)<small></small></span>
             </label>
             <label class="pad mdl-switch mdl-js-switch mdl-js-ripple-effect" for="parking">
